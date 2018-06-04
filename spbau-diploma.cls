@@ -72,7 +72,9 @@
 
 %% Включение графических файлов
 %% we don't need to load graphicx since it will be loaded by xunicode (which is loaded by fontspec) 
-\usepackage[titletoc]{appendix}
+\usepackage[title,titletoc]{appendix}
+%\usepackage[title,titletoc]{appendix}
+\renewcommand{\appendixname}{priedas}
 
 %% Эта команда добавляет отчеркнутое место для подписи после имени
 %% Аргументы: имя и пояснение под чертой (например, слово "подпись")
@@ -312,3 +314,6 @@
 \def\numberline#1{\savenumberline{#1.}}
 
 %\bibliographystyle{ieeetr}
+
+
+
