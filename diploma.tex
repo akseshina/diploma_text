@@ -243,9 +243,11 @@ TODO
 ЗДЕСЬ ЕЩЁ НАПИСАТЬ, КАК ПОНИМАТЬ, КАКОЙ НАБОР ПУТЕЙ НАИЛУЧШИМ ОБРАЗОМ ОБЪЯСНЯЕТ ПОКРЫТИЕ
 
 
-\subsection{Итоговый алгоритм}
+%\subsection{Итоговый алгоритм}
+% * <novmargo@gmail.com> 06:58:17 09 Jun 2018 UTC+0300:
+% TODO
 
-ОФОРМИТЬ ВСЁ ВЫШЕСКАЗАННОЕ В ПСЕВДОКОД
+%ОФОРМИТЬ ВСЁ ВЫШЕСКАЗАННОЕ В ПСЕВДОКОД
 
 
 
@@ -255,28 +257,29 @@ TODO
 
 \begin{table}[]
 \centering
-\begin{tabular}{lllllll}
-эксперимент & \begin{tabular}[c]{@{}l@{}}средняя\\ ошибка\\ частот\\ штаммов\end{tabular} &  &  & \begin{tabular}[c]{@{}l@{}}DESMAN \\ на юнитигах \\ \textgreater 1kb\end{tabular} & \begin{tabular}[c]{@{}l@{}}дополнение \\ однозначных \\ продолжений\end{tabular} & \begin{tabular}[c]{@{}l@{}}анализ \\ пузырей\end{tabular} \\
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+эксперимент & \begin{tabular}[c]{@{}l@{}}средняя\\ ошибка\\ частот\\ штаммов\end{tabular} &  &  & \begin{tabular}[c]{@{}l@{}}DESMAN \\ на юнитигах \\ \textgreater 1kb\end{tabular} & \begin{tabular}[c]{@{}l@{}}дополнение \\ однозначных \\ продолжений\end{tabular} & \begin{tabular}[c]{@{}l@{}}анализ \\ пузырей\end{tabular} \\ \hline \midrule
 g2\_r1 & 0.002 &  & precision & 0.99 & 0.99 & 0.99 \\
- &  &  & recall & 0.67 & 0.83 & 0.91 \\
+ &  &  & recall & 0.67 & 0.83 & 0.91 \\\hline
 g2\_r1 & 0.021 &  &  & 0.98 & 0.98 & 0.99 \\
- &  &  &  & 0.44 & 0.57 & 0.78 \\
+ &  &  &  & 0.44 & 0.57 & 0.78 \\\hline
 g3\_r1 & 0.011 &  &  & 0.99 & 0.99 & 0.99 \\
- &  &  &  & 0.52 & 0.71 & 0.85 \\
+ &  &  &  & 0.52 & 0.71 & 0.85 \\\hline
 g3\_r2 & 0.024 &  &  & 0.98 & 0.97 & 0.97 \\
- &  &  &  & 0.51 & 0.69 & 0.81 \\
+ &  &  &  & 0.51 & 0.69 & 0.81 \\\hline
 g4\_r1 & 0.015 &  &  & 0.99 & 0.98 & 0.99 \\
- &  &  &  & 0.40 & 0.58 & 0.76 \\
+ &  &  &  & 0.40 & 0.58 & 0.76 \\\hline
 g4\_r2 & 0.015 &  &  & 0.99 & 0.98 & 0.98 \\
- &  &  &  & 0.38 & 0.55 & 0.79 \\
+ &  &  &  & 0.38 & 0.55 & 0.79 \\\hline
 g5\_r1 & 0.008 &  &  & 0.97 & 0.96 & 0.97 \\
- &  &  &  & 0.26 & 0.41 & 0.67 \\
+ &  &  &  & 0.26 & 0.41 & 0.67 \\\hline
 g5\_r2 & 0.025 &  &  & 0.99 & 0.99 & 0.99 \\
- &  &  &  & 0.26 & 0.42 & 0.67 \\
-\begin{tabular}[c]{@{}l@{}}infant\\ gut\end{tabular} &  & s1 & \begin{tabular}[c]{@{}l@{}}precision\\ recall\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.76\\ 0.22\end{tabular} & \begin{tabular}[c]{@{}l@{}}:qex\\ ee\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.77\\ 0.51\end{tabular} \\
- &  & s3 & \begin{tabular}[c]{@{}l@{}}precision \\ recall\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.82\\ 0.21\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.85\\ 0.40\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.86\\ 0.48\end{tabular}
+ &  &  &  & 0.26 & 0.42 & 0.67 \\\hline
+\begin{tabular}[c]{@{}l@{}}infant\\ gut\end{tabular} &  & s1 & \begin{tabular}[c]{@{}l@{}}precision\\ recall\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.76\\ 0.22\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.76\\ 0.43\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.77\\ 0.51\end{tabular} \\
+ &  & s3 & \begin{tabular}[c]{@{}l@{}}precision \\ recall\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.82\\ 0.21\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.85\\ 0.40\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.86\\ 0.48\end{tabular} \\ \bottomrule
 \end{tabular}
-\caption{Результаты экспериментов}
+\caption{Результаты экспериментов. Для синтетических данных приведены средние полнота и точность по всем штаммам. Для \textit{infant gut} точность и полнота указаны для двух штаммов отдельно.}
 \label{res_table}
 \end{table}
 
