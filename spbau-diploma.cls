@@ -321,3 +321,7 @@
 
 \usepackage{graphicx}
 \usepackage{subcaption}
+
+\usepackage{dblfloatfix}
+
+\usepackage{graphicx}
